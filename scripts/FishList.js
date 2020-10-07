@@ -2,18 +2,27 @@
 * FishList which renders individual fish objects as HTML
 */
 
-import { useFish } from "./FishDataProvider"
+import { Fish } from "./Fish.js"
+import { useFish } from "./FishDataProvider.js"
 
-// TODO: Import `useFish` from the data provider module
+
 
 export const FishList = () => {
-
-    const contentElement = document.querySelector("contentContainer__left")
+    const contentElement = document.querySelector(".contentContainer__left")
+    
     const fishes = useFish()
 
+    let fishHTMLRepresentations = ""
+    for (const fish of fishes) {
+        fishHTMLRepresentations += Fish(fish)
+    }
+
     contentElement.innerHTML += `
-        <article class="fishList">
-            All the fish go here!
-        </article>
+        <section class="fishList">
+            <h3>Fish List</h3>
+            <div class="fishContainer">
+                ${fishHTMLRepresentations}
+            </div>
+        </section>
     `
 }
