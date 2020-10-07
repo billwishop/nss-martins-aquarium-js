@@ -26,3 +26,7 @@ const fishCollection = [
         image: "https://www.liveaquaria.com/images/categories/thumbs/th-0117192-068.jpg"
     }
 ]
+
+export const useFish = () => {
+    return fishCollection.slice()
+}
