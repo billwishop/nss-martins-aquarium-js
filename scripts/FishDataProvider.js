@@ -1,4 +1,4 @@
-// Fish objects that will feed into functions to create HTML
+/*Fish objects that will feed into functions to create HTML*/
 
 const fishCollection = [
     {
