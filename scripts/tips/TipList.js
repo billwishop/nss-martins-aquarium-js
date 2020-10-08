@@ -1,5 +1,5 @@
-import { useTips } from "./tips/TipDataProvider.js"
-import { Tips } from "./tips/Tips.js"
+import { useTips } from "./TipDataProvider.js"
+import { Tips } from "./Tip.js"
 
 export const TipList = () => {
     const contentElement = document.querySelector(".contentContainer__right")
@@ -14,7 +14,9 @@ export const TipList = () => {
     <div class="tipSection">
         <h3>Tips</h3>
         <div class="tipList">
-            <div class="tip">${tipsHTMLRepresentations}</div>
+            <div class="tip">
+                ${tipsHTMLRepresentations}
+            </div>
          </div>
     </div>
     `
