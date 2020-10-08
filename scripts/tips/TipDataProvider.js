@@ -1,4 +1,4 @@
-const tipsCollection = () => [
+const tipsCollection = [
     {
         title: "Tank Care:",
         tip: "The tank should be completely empty before you clean it. You’ll need salt, vinegar and some soft scrubbing pads. The vinegar and salt will remove any hard water stains and fishy smells. Make sure you rinse the tank thoroughly before adding any water to it. Once the tank has had a thorough clean, fill it up with water to check there are no leaks. If you do find leaks, you can use aquarium sealant."
@@ -16,3 +16,4 @@ const tipsCollection = () => [
 export const useTips = () => {
     return tipsCollection.slice()
 }
+
