@@ -1,6 +1,6 @@
 console.log("Welcome to the main module")
 
-import { useFish } from './fish/FishDataProvider.js'
+import { mostHolyFish, useFish } from './fish/FishDataProvider.js'
 import { FishList } from './fish/FishList.js'
 import { usePlaces } from './locations/LocationDataProvider.js'
 import { LocationsList } from './locations/LocationList.js'
@@ -33,3 +33,5 @@ for (const place of allTheLocations) {
 }
 
 LocationsList()
+
+mostHolyFish()
