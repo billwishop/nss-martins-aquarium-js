@@ -13,7 +13,7 @@ const fishCollection = [
         name: "Grover",
         food: "crustaceans",
         species: "Yellow Marlboro Discus",
-        length: 8,
+        length: 5,
         location: "Australia",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th89585YellowMarlboroDiscus.jpg"
     },
@@ -21,7 +21,7 @@ const fishCollection = [
         name: "Jamie",
         food: "crustaceans",
         species: "Stardust Discus",
-        length: 8,
+        length: 10,
         location: "Argentina",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th-0117192-068.jpg"
     },
@@ -29,7 +29,7 @@ const fishCollection = [
         name: "Andy",
         food: "crustaceans",
         species: "Red Marlboro Discus",
-        length: 9,
+        length: 30,
         location: "Xochimilco",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th89561RedMarlboroDiscus.jpg"
     },
@@ -37,7 +37,7 @@ const fishCollection = [
         name: "Jasmine",
         food: "crustaceans",
         species: "Yellow Marlboro Discus",
-        length: 8,
+        length: 60,
         location: "Australia",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th89585YellowMarlboroDiscus.jpg"
     },
@@ -53,7 +53,7 @@ const fishCollection = [
         name: "Papa",
         food: "crustaceans",
         species: "Red Marlboro Discus",
-        length: 9,
+        length: 20,
         location: "Xochimilco",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th89561RedMarlboroDiscus.jpg"
     },
@@ -61,7 +61,7 @@ const fishCollection = [
         name: "Todd",
         food: "crustaceans",
         species: "Yellow Marlboro Discus",
-        length: 8,
+        length: 15,
         location: "Australia",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th89585YellowMarlboroDiscus.jpg"
     },
@@ -69,7 +69,7 @@ const fishCollection = [
         name: "Johnny",
         food: "crustaceans",
         species: "Stardust Discus",
-        length: 8,
+        length: 21,
         location: "Argentina",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th-0117192-068.jpg"
     },
@@ -77,7 +77,7 @@ const fishCollection = [
         name: "Bella",
         food: "crustaceans",
         species: "Red Marlboro Discus",
-        length: 9,
+        length: 20,
         location: "Xochimilco",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th89561RedMarlboroDiscus.jpg"
     },
@@ -93,12 +93,50 @@ const fishCollection = [
         name: "Sandy",
         food: "crustaceans",
         species: "Stardust Discus",
-        length: 8,
+        length: 10,
         location: "Argentina",
         image: "https://www.liveaquaria.com/images/categories/thumbs/th-0117192-068.jpg"
     }
 ]
 
 export const useFish = () => {
+    //.slice returns a new copy of the array
     return fishCollection.slice()
+}
+
+// function responsible for checking for multiple of 3
+export const mostHolyFish = () => {
+    
+    const holyFish = []
+
+    for (const fish of fishCollection) {
+        if (fish.length % 3 === 0)
+        holyFish.push(fish)
+    }
+    return holyFish
+}
+
+// function responsible for checking for multiple of 5
+export const soldierFish = () => {
+    
+    const soldiers = []
+
+    for (const fish of fishCollection) { 
+        if (fish.length % 5 === 0 && fish.length % 3 !== 0)
+        soldiers.push(fish)
+    }
+
+    return soldiers
+}
+
+export const nonHolyFish = () => {
+
+    const regularFish = []
+
+    for (const fish of fishCollection) {
+        if (fish.length % 3 !== 0 && fish.length % 5 !== 0)
+        regularFish.push(fish)
+    }
+
+    return regularFish
 }
